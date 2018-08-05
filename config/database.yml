@@ -5,21 +5,27 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: kwaku
+  host: localhost
+  password: 111666
+  encoding: unicode
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: cameldb_classified
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: cameldb_test_classified
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: camel_classified
