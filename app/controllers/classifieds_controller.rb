@@ -25,7 +25,8 @@ class ClassifiedsController < ApplicationController
   # POST /classifieds
   # POST /classifieds.json
   def create
-    @classified = Classified.new(classified_params)
+    #@classified = Classified.new(classified_params)
+    @classified = current_user.classifieds.new(classified_params)
 
     respond_to do |format|
       if @classified.save
@@ -91,6 +92,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classified_params
-      params.fetch(:classified, {})
+      params.require(:classified).permit(:title, :description, :price, :location,:category_id,{images: []})
     end
 end

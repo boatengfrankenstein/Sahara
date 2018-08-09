@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% end %>
+
+
+<div class="container-fluid">
+<div id="masonry-container"> 
+   
+       <% @classifieds.each do |classified| %>   
+         <div class="box col2"> 
+         <%= link_to image_tag(classified.image_url),classified_path(classified) %> 
+          <div class="card-body card-body-cascade text-center">
+       
+          <!-- Description -->
+          <p class="card-text"><%= classified.title %></p>
+           <p class="card-meta"><small><%= classified.location %></small></p>
+          <!-- Card footer -->
+          <div class="card-footer px-1">
+          
+            <span class="float-left font-weight-bold">
+              <strong>$</strong><strong><%= classified.price %></strong>
+            </span>
+          
+            <span class="float-right">
+              <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                <i class="fa fa-heart grey-text ml-3"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+         </div>
+ <% end %> 
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <h1>Movies</h1>
+    <% @categories.each do |category| %>
+      <p><%= link_to category.name, category %></p>
+    <% end %>
+  </div>

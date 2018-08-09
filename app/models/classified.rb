@@ -3,13 +3,11 @@ class Classified < ApplicationRecord
     validates_presence_of :price 
     validates_presence_of :location 
     validates_presence_of :description 
-    validates_presence_of :email 
+ 
     validates_numericality_of :price 
-    validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
-    validates :image_url, allow_blank: true, format: {
-      with:    %r{\.(gif|jpg|png)\Z}i,
-      message: 'must be a URL for GIF, JPG or PNG image.'
-    }
+  
+   
+    mount_uploaders :images, ImageUploader
     belongs_to :category 
     belongs_to :user
     

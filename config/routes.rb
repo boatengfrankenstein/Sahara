@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :categories
-  resources :classifieds
+  resources :classifieds do
+    resources :images, :only =>[:create, :destroy]
+  end
   resources :movies
   resources :directors
 

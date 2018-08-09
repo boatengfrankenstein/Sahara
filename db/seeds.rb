@@ -6,17 +6,77 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
-include Faker
-20.times do
-     Classified.create!(
-      title: Faker::Book.title,
-      price: Faker::Number.decimal(2,2),
-      location: Faker::Address.city,
-      description: Faker::Lorem.sentence,
-      email: Faker::Internet.email,
-      category_id: Faker::Number.between(1,4),
-      user_id:Faker::Number.between(1,3),
-      image_url:"1.jpg"
-     )
-     end
+
+     classified = Classified.find(1)
+     classified.images = [
+        Pathname.new("app/assets/images/1.jpg").open,
+        Pathname.new("app/assets/images/2.jpg").open
+      ]
+      classified.save!
+
+      classified = Classified.find(2)
+      classified.images = [
+         Pathname.new("app/assets/images/3.jpg").open,
+         Pathname.new("app/assets/images/4.jpg").open
+       ]
+       classified.save!
+
+       classified = Classified.find(3)
+       classified.images = [
+          Pathname.new("app/assets/images/5.jpg").open,
+          Pathname.new("app/assets/images/6.jpg").open
+        ]
+        classified.save!
+
+        classified = Classified.find(4)
+        classified.images = [
+           Pathname.new("app/assets/images/7.jpg").open,
+           Pathname.new("app/assets/images/8.jpg").open
+         ]
+         classified.save!
+    
+
+         classified = Classified.find(5)
+         classified.images = [
+            Pathname.new("app/assets/images/6.jpg").open,
+            Pathname.new("app/assets/images/7.jpg").open
+          ]
+          classified.save!
+
+
+          classified = Classified.find(6)
+          classified.images = [
+             Pathname.new("app/assets/images/8.jpg").open,
+             Pathname.new("app/assets/images/9.jpg").open
+           ]
+           classified.save!
+
+    classified = Classified.find(7)
+     classified.images = [
+        Pathname.new("app/assets/images/10.jpg").open,
+        Pathname.new("app/assets/images/11.jpg").open
+      ]
+      classified.save!
+
+
+      classified = Classified.find(8)
+      classified.images = [
+         Pathname.new("app/assets/images/12.jpg").open,
+         Pathname.new("app/assets/images/13.jpg").open
+       ]
+       classified.save!
+    
+
+       classified = Classified.find(14)
+       classified.images = [
+          Pathname.new("app/assets/images/14.jpg").open,
+          Pathname.new("app/assets/images/15.jpg").open
+        ]
+        classified.save!
+
+        classified = Classified.find(15)
+        classified.images = [
+           Pathname.new("app/assets/images/16.jpg").open,
+           Pathname.new("app/assets/images/17.jpg").open
+         ]
+         classified.save!

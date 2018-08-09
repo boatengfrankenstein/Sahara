@@ -2,3 +2,32 @@
 
 <%= link_to 'Edit', edit_classified_path(@classified) %> |
 <%= link_to 'Back', classifieds_path %>
+
+<div class="container-fluid">
+<div id="masonry-container"> 
+   
+         <div class="box col2"> 
+         <%= link_to image_tag(@classified.images[0].url) %> 
+          <div class="card-body card-body-cascade text-center">
+       
+          <!-- Description -->
+          <p class="card-text"><%= @classified.title %></p>
+           <p class="card-meta"><small><%= @classified.location %></small></p>
+          <!-- Card footer -->
+          <div class="card-footer px-1">
+          
+            <span class="float-left font-weight-bold">
+              <strong>$</strong><strong><%= @classified.price %></strong>
+            </span>
+          
+            <span class="float-right">
+              <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                <i class="fa fa-heart grey-text ml-3"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+         </div>
+
+</div>
+</div>
