@@ -1,11 +1,21 @@
 class User < ApplicationRecord
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  
     devise    :database_authenticatable, :registerable,
               :recoverable, :rememberable, :trackable, :validatable,
               :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2, :twitter]
+          
+              
               has_many :classifieds 
-  
+              has_many :conversations, :foreign_key => :sender_id
+          
+
+    validates :username, presence: :true, uniqueness: { case_sensitive: false }
+    validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+
+   
     def self.create_from_facebook_data(facebook_data)
       where(provider: facebook_data.provider, uid: facebook_data.uid).first_or_create do | user |
         user.email = facebook_data.info.email

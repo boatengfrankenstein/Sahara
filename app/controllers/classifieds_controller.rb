@@ -6,11 +6,14 @@ class ClassifiedsController < ApplicationController
   def index
     @classifieds = Classified.all
     @categories = Category.all
+    
   end
 
   # GET /classifieds/1
   # GET /classifieds/1.json
   def show
+    @cl = Classified.find(params[:id])
+    @user = User.find(@cl.user_id)
   end
 
   # GET /classifieds/new
