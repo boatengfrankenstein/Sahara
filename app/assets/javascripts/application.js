@@ -9,6 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+//= require private_pub
 //= require chat
 //= require masonry/jquery.masonry
 //= require rails-ujs

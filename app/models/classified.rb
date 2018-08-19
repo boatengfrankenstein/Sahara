@@ -5,11 +5,11 @@ class Classified < ApplicationRecord
     validates_presence_of :description 
  
     validates_numericality_of :price 
-  
    
     mount_uploaders :images, ImageUploader
     belongs_to :category 
     belongs_to :user
+    has_many :conversations
     
     protected 
     def validate 

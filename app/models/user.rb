@@ -7,7 +7,7 @@ class User < ApplicationRecord
               :recoverable, :rememberable, :trackable, :validatable,
               :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2, :twitter]
           
-              
+            
               has_many :classifieds 
               has_many :conversations, :foreign_key => :sender_id
           

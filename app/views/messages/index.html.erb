@@ -1,0 +1,34 @@
+
+<div id="messages">
+  <% @conversation.messages.each do |message| %>
+    <% if message.body %>
+      <div class="media">
+        <div class="media-left">
+    
+        </div>
+        <div class="media-body">
+          <h5 class="media-heading"><%= message.user.username %> </h5>
+          <p><%= message.body %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+
+</div>
+<%= form_for [@conversation, @message] do |f| %>
+  <div class="form-group">
+    <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 5 %>
+  </div>
+
+  <%= f.submit "Send", class: "btn btn-primary pull-right" %>
+<% end %>
+
+<div id="masonry-container">
+    <div class="box col2">
+<%= image_tag(@classified.images[0].url) %>
+</div>

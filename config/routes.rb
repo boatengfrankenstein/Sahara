@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   resources :classifieds do
     resources :images, :only =>[:create, :destroy]
   end
+
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+    resources :classifieds, only: [:show, :index]
+
+  end
+
   resources :movies
   resources :directors
 

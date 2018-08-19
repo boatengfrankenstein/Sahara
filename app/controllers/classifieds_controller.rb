@@ -14,6 +14,7 @@ class ClassifiedsController < ApplicationController
   def show
     @cl = Classified.find(params[:id])
     @user = User.find(@cl.user_id)
+    #@conversations = Conversation.involving(current_user).order("created_at DESC")
   end
 
   # GET /classifieds/new
