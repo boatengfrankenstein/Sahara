@@ -1,4 +1,6 @@
-
+<div class="container">
+<%= render "layouts/addphoto",object: @classified %>
+</div>
 <div id="messages">
   <% @conversation.messages.each do |message| %>
     <% if message.body %>
@@ -13,22 +15,20 @@
       </div>
     <% end %>
   <% end %>
-</div>
 
-
-
-
+ 
 
 </div>
-<%= form_for [@conversation, @message] do |f| %>
+
+
+
+
+</div>
+<%= form_for [@conversation, @message], validate: true  do |f| %>
   <div class="form-group">
-    <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 5 %>
+    <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 1 %>
   </div>
 
   <%= f.submit "Send", class: "btn btn-primary pull-right" %>
 <% end %>
 
-<div id="masonry-container">
-    <div class="box col2">
-<%= image_tag(@classified.images[0].url) %>
-</div>

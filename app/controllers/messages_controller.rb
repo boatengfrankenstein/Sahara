@@ -16,6 +16,8 @@ class MessagesController < ApplicationController
     if @message.save
       ActionCable.server.broadcast "messages", { conversation_id: @conversation.id }
       redirect_to conversation_messages_path(@conversation)
+    else
+    
     end
   end
 
