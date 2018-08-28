@@ -24,8 +24,8 @@
 
 
 </div>
-<%= form_for [@conversation, @message], validate: true  do |f| %>
-  <div class="form-group">
+<%= simple_form_for [@conversation, @message], validate: true  do |f| %>
+        <div class="form-inputs">
     <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 1 %>
   </div>
 

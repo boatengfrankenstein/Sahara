@@ -1,12 +1,14 @@
 class MessagesController < ApplicationController
   before_action do
     @conversation = Conversation.find(params[:conversation_id])
+    @classified = Classified.find(@conversation.classified_id)
+    
   end
 
   def index
     @conversation.messages.where("user_id != ? AND read = ?", current_user.id, false).update_all(read: true)
     @message = @conversation.messages.new
-    @classified = Classified.find(@conversation.classified_id)
+ 
   end
 
   def create
@@ -17,7 +19,7 @@ class MessagesController < ApplicationController
       ActionCable.server.broadcast "messages", { conversation_id: @conversation.id }
       redirect_to conversation_messages_path(@conversation)
     else
-    
+     
     end
   end
 

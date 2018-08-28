@@ -24,7 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'carrierwave'
 gem 'private_pub'
 gem 'thin'
-gem 'client_side_validations'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
@@ -74,3 +74,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'ransack', '~> 1.8', '>= 1.8.2'
 
+gem 'simple_form'
+
+
+gem 'client_side_validations'
+
+gem 'client_side_validations-simple_form'
