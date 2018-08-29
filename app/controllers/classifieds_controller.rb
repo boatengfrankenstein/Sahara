@@ -4,7 +4,7 @@ class ClassifiedsController < ApplicationController
   # GET /classifieds
   # GET /classifieds.json
   def index
-    @classifieds = Classified.all
+    @classifieds = Classified.where.not(user_id: current_user)
     @categories = Category.all
     
   end
