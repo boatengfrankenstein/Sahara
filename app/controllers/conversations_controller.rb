@@ -13,7 +13,6 @@ class ConversationsController < ApplicationController
       @classified = Classified.find(@conversation.classified_id)
  
     
-    
     redirect_to conversation_messages_path(@conversation, @classified)
   end
 

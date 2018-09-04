@@ -4,8 +4,8 @@
       <% @conversations.each do |conversation| %>
         <li class="list-group-item" data-conversation-id="<%= conversation.id %>">
           <%= link_to conversation.reciever(current_user).username, conversation_messages_path(conversation) %>
-          <% if !conversation.unread_message_count(current_user).zero? %>
-            <span class="badge"><%= conversation.unread_message_count(current_user) %></span>
+       <% if !conversation.unread_message_count(current_user).zero? %>
+            <span class="notification--num"><%= conversation.unread_message_count(current_user) %></span>
           <% end %>
         </li>
       <% end %>

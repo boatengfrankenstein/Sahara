@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :movies
   resources :directors
+  resources :user_profile
 
   get :search, controller: :classifieds
   root to: 'classifieds#index'
