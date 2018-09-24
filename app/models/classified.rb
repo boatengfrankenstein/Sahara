@@ -3,8 +3,8 @@ class Classified < ApplicationRecord
     validates_presence_of :price 
     validates_presence_of :location 
     validates_presence_of :description 
- 
     validates_numericality_of :price 
+    validates_presence_of :images, file_size: { less_than: 40.megabytes }
    
     mount_uploaders :images, ImageUploader
     belongs_to :category 

@@ -96,6 +96,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classified_params
-      params.require(:classified).permit(:title, :description, :price, :location,:category_id,{images: []})
+      params.require(:classified).permit(:title, :description, :price, :location,:category_id,{images: []}, :images_cache)
     end
 end
