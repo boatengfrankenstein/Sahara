@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
+<!--
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% end %>
+-->
 
-<div class="container-fluid">
+
+
+
+    <%= render partial: "layouts/menu" %>
 <div id="masonry-container">
 
        <% @classifieds.each do |classified| %>
-         <div class="box col2">
+         <div class="box col2  hvr-grow">
       
          <%= link_to image_tag(classified.images[0].url), classified_path(classified)  %>
      
@@ -21,20 +26,13 @@
           <!-- Card footer -->
           <div class="card-footer px-1">
 
-            <span class="float-left font-weight-bold">
-              <strong>$</strong><strong><%= classified.price %></strong>
-            </span>
-
-            <span class="float-right">
-              <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                <i class="fa fa-heart grey-text ml-3"></i>
-              </a>
-            </span>
+          
           </div>
         </div>
          </div>
  <% end %>
-</div>
-</div>
 
 
+
+
+<br>

@@ -12,6 +12,7 @@
 //= require private_pub
 //= require rails.validations
 //= require chat
+//= require menu
 //= require masonry/jquery.masonry
 //= require rails-ujs
 //= require turbolinks

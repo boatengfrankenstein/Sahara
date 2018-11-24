@@ -9,74 +9,74 @@
 
      classified = Classified.find(1)
      classified.images = [
-        Pathname.new("app/assets/images/1.jpg").open,
-        Pathname.new("app/assets/images/2.jpg").open
+       remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-100x100-Anemone.jpg",
+       remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/bullseye-monster-grape-3.jpg"
       ]
       classified.save!
 
       classified = Classified.find(2)
       classified.images = [
-         Pathname.new("app/assets/images/3.jpg").open,
-         Pathname.new("app/assets/images/4.jpg").open
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-100x100-MandarinOrange.jpg",
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-100x100-Stones.jpg"
        ]
        classified.save!
 
        classified = Classified.find(3)
        classified.images = [
-          Pathname.new("app/assets/images/5.jpg").open,
-          Pathname.new("app/assets/images/6.jpg").open
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-200x200-Bottles.jpg",
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-200x200-AzukiBeans.jpg"
         ]
         classified.save!
 
         classified = Classified.find(4)
         classified.images = [
-           Pathname.new("app/assets/images/7.jpg").open,
-           Pathname.new("app/assets/images/8.jpg").open
+          remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-200x200-Sheep.jpg",
+          remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-315x560-Flamingo.jpg"
          ]
          classified.save!
     
 
          classified = Classified.find(5)
          classified.images = [
-            Pathname.new("app/assets/images/6.jpg").open,
-            Pathname.new("app/assets/images/7.jpg").open
+          remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-315x560-Orange.jpg",
+          remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-315x560-Utrecht.jpg"
           ]
           classified.save!
 
 
           classified = Classified.find(6)
           classified.images = [
-             Pathname.new("app/assets/images/8.jpg").open,
-             Pathname.new("app/assets/images/9.jpg").open
+            remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-375x500-CetoniaAurata.jpg",
+            remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-375x500-Goemetry.jpg"
            ]
            classified.save!
 
     classified = Classified.find(7)
      classified.images = [
-        Pathname.new("app/assets/images/10.jpg").open,
-        Pathname.new("app/assets/images/11.jpg").open
+      remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-375x500-Strawberry.jpg",
+      remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-454x280-Comb.jpg"
       ]
       classified.save!
 
 
       classified = Classified.find(8)
       classified.images = [
-         Pathname.new("app/assets/images/12.jpg").open,
-         Pathname.new("app/assets/images/13.jpg").open
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-454x280-Fish.jpg",
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-454x280-Snake.jpg"
        ]
        classified.save!
     
 
        classified = Classified.find(14)
        classified.images = [
-          Pathname.new("app/assets/images/14.jpg").open,
-          Pathname.new("app/assets/images/15.jpg").open
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-480x270-Butterfly.jpg",
+        remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-480x270-DesiccationCracks.jpg"
         ]
         classified.save!
 
         classified = Classified.find(15)
         classified.images = [
-           Pathname.new("app/assets/images/16.jpg").open,
-           Pathname.new("app/assets/images/17.jpg").open
+          remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-480x270-FrozenRaspberry.jpg",
+          remote_photo_url: "https://s3.amazonaws.com/sahara-market/uploads/classified/images/25/dummy-576x1024-Lizard.jpg"
          ]
          classified.save!
