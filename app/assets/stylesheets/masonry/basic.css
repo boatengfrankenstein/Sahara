@@ -19,8 +19,8 @@ body {
 }
 
 .box {
-  margin: 2px;
-  padding: 2px;
+  margin: 40px;
+  padding: 5px;
   background: #FFF;
   background: #FFF;
   font-size: 11px;
@@ -48,17 +48,17 @@ body {
   border-radius: 10px;
   }
 
-.col1 { width: 80px; }
-.col2 { width: 180px; }
-.col3 { width: 280px; }
-.col4 { width: 380px; }
-.col5 { width: 480px; }
-
-.col1 img { max-width: 80px; }
-.col2 img { max-width: 180px; }
-.col3 img { max-width: 280px; }
-.col4 img { max-width: 380px; }
-.col5 img { max-width: 480px; }
+  .col1 { width: 80px; }
+  .col2 { width: 180px; }
+  .col3 { width: 280px; }
+  .col4 { width: 380px; }
+  .col5 { width: 480px; }
+  
+  .col1 img { max-width: 80px; }
+  .col2 img { max-width: 180px; }
+  .col3 img { max-width: 280px; }
+  .col4 img { max-width: 380px; }
+  .col5 img { max-width: 480px; }
 
 /**** Clearfix ****/
 .clearfix:before, .clearfix:after { content: ""; display: table; }
@@ -125,7 +125,7 @@ body {
 	box-sizing: content-box;
  	height: 40px;
   padding: 0 46px 0 10px;
-	border-color: #888;
+	border-color: #fff;
   border-radius: 35px; /* (height/2) + border-width */
   border-style: solid;
 	border-width: 5px;
@@ -206,12 +206,12 @@ input:-moz-placeholder {
 
 main {
     min-height: 400px;
-    width: 70%;
+    width: 80%;
     min-width: 600px;
     background: #fff;
     padding: 40px 20px;
     border-radius: 5px;
-    box-shadow: 5px 55px 50px -20px #b6b6b6; 
+    box-shadow: 5px 55px 50px -20px #fff; 
 }
 
 ctext {
