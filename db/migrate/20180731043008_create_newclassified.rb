@@ -1,6 +1,6 @@
 class CreateNewclassified < ActiveRecord::Migration[5.1]
   def self.up 
-
+      drop_table :classifieds
     create_table :classifieds do |t| 
       t.column :title, :string 
       t.column :price, :float 

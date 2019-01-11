@@ -1,6 +1,6 @@
 class CreateCategories < ActiveRecord::Migration[5.1]
   def self.up
-    drop_table :categories
+    #drop_table :categories
     create_table :categories do |t|
       t.column :name, :string
     end
