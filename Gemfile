@@ -79,5 +79,6 @@ gem 'simple_form'
 
 gem 'file_validators'
 gem 'client_side_validations'
-
+gem 'will_paginate', '~> 3.1.0'
 gem 'client_side_validations-simple_form'
+gem 'will_paginate-bootstrap'

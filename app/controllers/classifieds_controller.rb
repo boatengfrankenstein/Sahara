@@ -4,7 +4,7 @@ class ClassifiedsController < ApplicationController
   # GET /classifieds
   # GET /classifieds.json
   def index
-    @classifieds = Classified.where.not(user_id: current_user)
+    @classifieds = Classified.where.not(user_id: current_user).paginate(:page => params[:page])
     @categories = Category.all
     
   end

@@ -10,7 +10,7 @@ class Classified < ApplicationRecord
     belongs_to :category 
     belongs_to :user
     has_many :conversations
-    
+    self.per_page = 10
     protected 
     def validate 
       errors.add(:price, "should be a positive value") if price.nil? || price < 0.01 
@@ -20,3 +20,4 @@ class Classified < ApplicationRecord
       where('LOWER(title) LIKE :term OR LOWER(description) LIKE :term OR LOWER(location) LIKE :term', term: "%#{term.downcase}%")
     end
 end
+WillPaginate.per_page = 10
