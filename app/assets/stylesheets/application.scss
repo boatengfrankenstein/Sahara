@@ -11,9 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
 *= require 'masonry/basic'
-*= require 'masonry/centered'
-*= require 'masonry/fluid'
 *= require 'mdb'
+*= require 'fab'
 *= require 'masonry/gutters'
 *= require 'masonry/infinitescroll'
 *= require 'masonry/right-to-left'
@@ -41,7 +40,5 @@ html {
     font-size: 1.7rem;
   }
   
-  main.container {
-    margin-top: 4rem;
-  }
+
   

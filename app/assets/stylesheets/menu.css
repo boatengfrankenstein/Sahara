@@ -25,6 +25,7 @@ h1{
 	height: 280px;
 	border:12px solid #DDE0CA;
 }
+
 .nav{
 	overflow:hidden;
   margin:0 auto;
@@ -43,22 +44,22 @@ h1{
 }
 .nav li:hover{
 	opacity:1;
-	height:50px;
+	height:85px;
 }
 .nav li.hm:hover{
-	border-bottom:4px solid rgba(11, 132, 138, 1);
+	border-bottom:4px solid rgba(68, 174, 227, 1);
 }
 .nav li.fb:hover{
-	border-bottom:4px solid rgba(241, 83, 70, 1);
+	border-bottom:4px solid rgba(68, 174, 227, 1);
 }
 .nav li.gp:hover{
-	border-bottom:4px solid rgba(32, 16, 49, 1);
+	border-bottom:4px solid rgba(68, 174, 227, 1);
 }
 .nav li.tw:hover{
-	border-bottom:4px solid rgba(228, 148, 7, 1);
+	border-bottom:4px solid rgba(68, 174, 227, 1);
 }
 .nav li.cl:hover{
-	border-bottom:4px solid rgba(67, 138, 15, 1);
+	border-bottom:4px solid rgba(68, 174, 227, 1);
 }
 img.icon{
 	background:rgba(255, 255, 255, 0.4);
@@ -216,7 +217,7 @@ input , input:focus {
 	width:32px;
 	height:28px;
 	}
-
+ 
 	
 /* Sections
    ========================================================================== */
@@ -1185,7 +1186,7 @@ legend {
   color: #fff;
   border: 0;
   cursor: pointer;
-  background: #63c76a;
+  background: #2f9acc;
   transition: all .2s ease-out, color .2s ease-out;
 }
 
@@ -1194,7 +1195,7 @@ legend {
 }
 
 .s003 form .inner-form .input-field.third-wrap .btn-search:hover {
-  background: #50c058;
+  background: #2f9acc;
 }
 
 .s003 form .inner-form .input-field.third-wrap .btn-search:focus {
@@ -1204,7 +1205,7 @@ legend {
 
 @media screen and (max-width: 992px) {
   .s003 form .inner-form .input-field {
-    height: 50px;
+    height: 30px;
   }
 }
 
@@ -1244,3 +1245,4 @@ legend {
     width: 100%;
   }
 }
+

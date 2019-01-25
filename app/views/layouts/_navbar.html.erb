@@ -1,69 +1,40 @@
+
 <nav>
-  <ul class="twitter w-100 p-3  center" role="navigation">
+
+  <ul class="twitter " role="navigation">
     <li><i class="fa fa-home"></i>Home</li>
-    <li><i class="fa fa-bell-o"></i>Notifications</li>
-    <li><i class="fa fa-envelope-o"></i>Messages</li>
+   <li><i class=" fa fa-envelope"></i><span>1 </span><span>Chats & Notifcations </span>
 
-    <li class="w-50 p-3 center">
-      
+    </li>
+
+   <li class="nav-item">
+     
+        </li>
+     
   
-	    <!--
-    	    <div id="custom-search-input">
-            <div class="input-group">
-                  <%= form_with url: search_path, local: true, method: :get, html: { class: "input-group " } do |form| %> 
-                  <%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "search-query form-control input-lg custom-search-input input-group"  %>
-                  <span class="input-group-btn">
-                   <button type="button" disabled>
-                     
-                        <span class="fa fa-search"> <%= form.submit "", class: "fa fa-search" %></span> 
+  
 
-                              </button>      
-
-                      <% end %>
-           </div>
-                </div>
-          
--->
-
-
+  <% if user_signed_in? %>
+  
+      
+     <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item avatar">
+        <a class="nav-link p-0" href="#">
+          <%= photo_avatar(current_user, class: 'rounded-circle z-depth-0 ', style: 'width:30px;height:30px;') %>
+              <i> <strong><%= current_user.username %></strong> </i>
+        </a>
       </li>
-    <li><i class="fa fa-user-circle-o"></i></li>
-    <li><button>tweet</button></li>
+    </ul>
+      <% end %>
+   
   </ul>
+
+    
+
 </nav>
 
 
 
-<br>
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% end %>
-<!------ Include the above in your HEAD tag ---------->
-
-<!--
-  <div class="row justify-content-md-center">
- <div id="imaginary_container"> 
 
 
-    <%= form_with url: search_path, local: true, method: :get, html: { class: "form-inline col-xl" } do |form| %>
-      <%= form.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, class: "form-control col-xl" %>
-      <%= form.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
-    <% end %>
-
-</div>
-</div>  
-
-
-
-
-    	    <div id="custom-search-input">
-                <div class="input-group">
-                    <input type="text" class="search-query form-control" placeholder="Search" />
-                    <span class="input-group-btn">
-                        <button type="button" disabled>
-                            <span class="fa fa-search"></span>
-                        </button>
-                    </span>
-                </div>
--->
+  

@@ -1,5 +1,7 @@
 {
   "name": "autocomplete",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "material-design-lite": "^1.3.0"
+  }
 }

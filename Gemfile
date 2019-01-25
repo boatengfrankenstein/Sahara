@@ -49,6 +49,10 @@ gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 # Use Omniauth Twitter plugin
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
+# Dragonfly and Avatar Magick
+gem 'dragonfly', '~> 1.0.11'
+gem 'avatar_magick', '~> 1.0.1'
+gem 'avatars_for_rails', '~> 0.2.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

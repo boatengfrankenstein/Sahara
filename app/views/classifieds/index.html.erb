@@ -1,16 +1,14 @@
-<%= render partial: "layouts/navbar" %>
+
 <p id="notice"><%= notice %></p>
-
+ <div class="container">
 <%= render partial: "layouts/menu" %>
-
+ <%= will_paginate @classifieds%>
 <div id="masonry-container">
 
        <%  @classifieds.each do |classified| %>
          <div class="box col2  hvr-grow">
       
          <%= link_to image_tag(classified.images[0].url), classified_path(classified)  %>
-     
-       
           <div class="card-body card-body-cascade text-center">
 
           <!-- Description -->
@@ -23,11 +21,7 @@
  <% end %>
 
  </div>
- <div class="row justify-content-md-center">
- <div class="digg_pagination ">
- <%= will_paginate @classifieds, :container => false %>
-</div>
+
 </div>
 
 
-<%= render partial: "layouts/footer" %> 

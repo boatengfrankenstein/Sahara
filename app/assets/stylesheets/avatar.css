@@ -1,0 +1,19 @@
+
+  .initials {
+    position: relative;
+    top: 1px; /* 25% of parent */
+    font-size: 20px; /* 50% of parent */
+    line-height: 35px; /* 50% of parent */
+    color: #3C80F6;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+  }
+
+  .img-circular{
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+   }

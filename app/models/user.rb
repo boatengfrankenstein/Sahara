@@ -1,8 +1,11 @@
-class User < ApplicationRecord
-    # Include default devise modules. Others available are:
-    # :confirmable, :lockable, :timeoutable and :omniauthable
-
+class User < ApplicationRecord  
+          
   
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+ 
+
+   
     devise    :database_authenticatable, :registerable,
               :recoverable, :rememberable, :trackable, :validatable,
               :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2, :twitter]
@@ -11,7 +14,7 @@ class User < ApplicationRecord
               has_many :classifieds 
               has_many :conversations, :foreign_key => :sender_id
           
-
+              include Avatarable
     validates :username, presence: :true, uniqueness: { case_sensitive: false }
     validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
@@ -47,5 +50,11 @@ class User < ApplicationRecord
         user.skip_confirmation!      
       end    
     end
+
+     # required for avatarable
+    def avatar_text
+     username.chr
+     end
+
   end
   
