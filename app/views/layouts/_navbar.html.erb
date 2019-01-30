@@ -10,26 +10,33 @@
    <li class="nav-item">
      
         </li>
-     
-  
+   
+      <li><i> <%= link_to image_tag('postadd_small'), new_classified_path %></i><span>Post Add</span>
+
+    </li>
   
 
-  <% if user_signed_in? %>
-  
-      
      <ul class="navbar-nav ml-auto nav-flex-icons">
+
+
+
+  <% if user_signed_in? %>
       <li class="nav-item avatar">
         <a class="nav-link p-0" href="#">
           <%= photo_avatar(current_user, class: 'rounded-circle z-depth-0 ', style: 'width:30px;height:30px;') %>
               <i> <strong><%= current_user.username %></strong> </i>
         </a>
       </li>
+
+      
     </ul>
       <% end %>
    
   </ul>
 
-    
+  
+
+         </ul>
 
 </nav>
 
