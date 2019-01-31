@@ -1,4 +1,4 @@
-	
+	<!--
 <%= render 'shared/errors', object: classified %>
 <%= form_with(model: classified, local: true) do |f| %>
   <% if classified.errors.any? %>
@@ -47,3 +47,108 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
+-->
+<!-- Material form contact -->
+
+ <div class="container">
+
+<div id="l" class="signin-card card">
+  <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" autocomplete="off" style="color: #757575;">
+<div class="md-form mt-5 form-lg">
+ <select name="options" id="select" class="browser-default md-select form-control">
+ <option value="1">Option 1</option>
+ <option value="2">Option 2</option>
+ <option value="3">Option 3</option>
+ <option value="4">Option 4</option>
+ <option value="5">Option 5</option>
+ </select>
+ <label class="active" for="form6">select a category</label>
+ </div>
+
+  <!-- select category-->
+            <div class="md-form mt-5 form-lg" >
+                <input type="text" id="description" class="form-control md-textarea" aria-describedby="description" autocomplete="off" />
+                <label for="description">title</label>
+               
+            </div>
+
+
+            <!--INput-->
+            <div class="md-form mt-5 form-lg" >
+                <textarea type="text" id="description" class="form-control md-textarea" aria-describedby="description" ></textarea>
+                <label for="description">Description</label>
+                <small id="description" class="form-text  mb-4">
+                    At least 8 characters and 1 digit
+                </small>
+            </div>
+
+           <!-- Grid row -->
+  <div class="row">
+    <!-- Grid column -->
+    <div class="col">
+      <!-- Material input -->
+      <div class="md-form mt-3">
+        <input type="text" class="form-control" placeholder="$0.00">
+         <label for="description">Price</label>
+      </div>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col">
+  
+    <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+	<label for="id-name--1" class="switch-label"><span class="toggle--on">free</span><span class="toggle--off">free</span></label>
+      </div>
+  
+    <!-- Grid column -->
+  </div>
+
+
+  
+<div class="row">
+
+    <div class="col">
+   <div class='file-input'>
+      <input type='file'>
+     <div class="btn btn-primary btn-lg float-left"> choose file(s)</div>
+   </div>
+
+      </div>
+</div>
+
+  
+<div class="row">
+
+    <div class="col">
+  
+    <small id="description" class="form-text  mt-3 mb-4 float-left">  <br>No files selected</small>
+   </div>
+
+      </div>
+</div>
+
+            <!-- Sign up button -->
+            <div class="md_button md-form content center-align">
+         <div class="md-form mt-5  form-lg" >
+           <button class="btn btn-info btn-lg btn-block my-5" type="submit">Post ad</button>
+
+         </div>
+         </div>
+
+
+            <!-- Terms of service -->
+        
+
+        </form>
+        <!-- Form -->
+
+    </div>
+</div>
+</div>
+<!-- Material form contact -->
