@@ -89,13 +89,17 @@
      <div class="btn btn-primary btn-lg float-left"> choose file(s)</div>
    </div>
    -->
-   <div class="file">
-  
-  <%= f.file_field :images, multiple: true , class:"btn btn-primary btn-lg float-left", placeholder:"choose file(s)"%>
-  <%= f.hidden_field :images_cache %>
+
+  <div class="fallback">
+  <%= f.file_field :images, multiple: true %>
+ <!-- <%= f.hidden_field :images_cache %>  -->
+  <%= f.submit "Upload" %>
+  </div>
+
+
 </div>
 
-      </div>
+
 </div>
 
   
@@ -130,3 +134,13 @@
 </div>
 
 <!-- Material form contact -->
+
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('image-output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+  function upload_it(){
+    $("#upload-it").click();
+  };
+</script>

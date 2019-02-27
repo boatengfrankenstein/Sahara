@@ -53,6 +53,7 @@ gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 gem 'dragonfly', '~> 1.0.11'
 gem 'avatar_magick', '~> 1.0.1'
 gem 'avatars_for_rails', '~> 0.2.4'
+gem 'dropzonejs-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

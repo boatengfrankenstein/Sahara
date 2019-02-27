@@ -10,14 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require private_pub
+//= bootstrap-filestyle
 //= require rails.validations
 //= require chat
 //=require form
 //= require menu
 //= require masonry/jquery.masonry
 //= require rails-ujs
+//= require dropzone
 //= require turbolinks
 //= require bootstrap
 //= require material
 //= require jquery.easy-autocomplete
 //= require_tree .
+
+

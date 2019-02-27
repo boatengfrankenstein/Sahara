@@ -9,6 +9,7 @@ body {
 
 #container {
   background: #FFF;
+  width: 80%;
   padding: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -19,7 +20,7 @@ body {
 }
 
 .box {
-  margin: 40px;
+  margin: 10px;
   padding: 5px;
   background: #FFF;
   background: #FFF;
@@ -695,4 +696,9 @@ a.btn-social,
 .btn-email:hover
 {
     background-color: #6bd079;
+}
+
+.image-upload > input
+{
+display: none;
 }
