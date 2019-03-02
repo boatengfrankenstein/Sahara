@@ -89,16 +89,14 @@
      <div class="btn btn-primary btn-lg float-left"> choose file(s)</div>
    </div>
    -->
-  <div class="photoPreview">
-      <%= image_tag('upload', class: 'photoUpload') %>
-      <p id="uploadClick">Click to Upload</p>
-    </div>
+
+<div class="dropzone", id="my-awesome-dropzone">
 
   <%= f.file_field :images, multiple: true %>
  <!-- <%= f.hidden_field :images_cache %>  -->
   <%= f.submit "Upload" %>
  
-
+</div>
 
 </div>
 
