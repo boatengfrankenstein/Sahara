@@ -3,7 +3,7 @@
  <div class="container">
 
 <%= render 'shared/errors', object: classified %>
-<%= form_with(model: classified, :html => {:class => 'dropzone'}, local: true) do |f| %>
+<%= form_with(model: classified, :html => {:class => '',:id=>""}, local: true) do |f| %>
 
   <% if classified.errors.any? %>
     <div id="error_explanation">
@@ -69,11 +69,11 @@
 
     <!-- Grid column -->
     <div class="col">
- 
+
    <%= f.check_box :is_free, class: 'switch-input', id:"id-name--1" %>
 	<label for="id-name--1" class="switch-label"><span class="toggle--on">free</span><span class="toggle--off">free</span></label>
       </div>
-  
+
     <!-- Grid column -->
   </div>
 
@@ -81,7 +81,7 @@
   
 <div class="row">
 
-    <div class="col">
+   
     <!--
    <div class='file-input'>
       <%= f.file_field :images, multiple: true %>
@@ -90,17 +90,17 @@
    </div>
    -->
 
-
-  <div class="fallback">
-  <%= f.file_field :images, multiple: true ,  id: 'uploadAvatar' %>
+ <form class:"dropzone">
+    <div class="fallback">
+  <%= f.file_field :images, multiple: true %>
  <!-- <%= f.hidden_field :images_cache %>  -->
   
-</div>
+  </div>
+
+</form>
 
 
-</div>
-
-  
+  </div>
 <div class="row">
 
     <div class="col">
@@ -132,13 +132,3 @@
 </div>
 
 <!-- Material form contact -->
-
-<script>
-  var loadFile = function(event) {
-    var output = document.getElementById('image-output');
-    output.src = URL.createObjectURL(event.target.files[0]);
-  };
-  function upload_it(){
-    $("#upload-it").click();
-  };
-</script>
