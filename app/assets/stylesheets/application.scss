@@ -14,13 +14,14 @@
 *= require 'mdb'
 *= require 'fab'
 *= require 'masonry/gutters'
+*= require dropzone/basic
+*= require dropzone/dropzone
 *= require 'masonry/infinitescroll'
 *= require 'masonry/right-to-left'
 *= require 'masonry/transitions'
 *= require easy-autocomplete
 *= require easy-autocomplete.themes
 *= require_tree .
-*= require dropzone/dropzone
 *= require_self
 */
 

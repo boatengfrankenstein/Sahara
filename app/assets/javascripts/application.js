@@ -13,7 +13,7 @@
 //= bootstrap-filestyle
 //= require rails.validations
 //= require chat
-//=require form
+//= require form
 //= require menu
 //= require masonry/jquery.masonry
 //= require rails-ujs

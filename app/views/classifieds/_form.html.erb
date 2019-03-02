@@ -3,7 +3,7 @@
  <div class="container">
 
 <%= render 'shared/errors', object: classified %>
-<%= form_with(model: classified, local: true) do |f| %>
+<%= form_with(model: classified, :html => {:class => 'dropzone'}, local: true) do |f| %>
 
   <% if classified.errors.any? %>
     <div id="error_explanation">
@@ -90,14 +90,11 @@
    </div>
    -->
 
-<div class="dropzone", id="my-awesome-dropzone">
 
-  <%= f.file_field :images, multiple: true %>
+  <div class="fallback">
+  <%= f.file_field :images, multiple: true ,  id: 'uploadAvatar' %>
  <!-- <%= f.hidden_field :images_cache %>  -->
-  <%= f.submit "Upload" %>
- 
-</div>
-
+  
 </div>
 
 
