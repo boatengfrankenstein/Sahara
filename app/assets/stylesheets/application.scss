@@ -15,7 +15,7 @@
 *= require 'fab'
 *= require 'masonry/gutters'
 *= require dropzone/basic
-*= require 'dropzone'
+*= require 'dropzone/dropzone'
 *= require 'masonry/infinitescroll'
 *= require 'masonry/right-to-left'
 *= require 'masonry/transitions'
@@ -34,19 +34,4 @@ html {
     font-size: 12px;
   }
   
-  body {
-    color: #283c46;
-    background-color: #ffffff;
-    line-height: 1.5;
-    margin-top: 0;
-    font-size: 1.7rem;
-  }
-  
-
-  
-  .dropzone {
-    background: #f4f4f4 !important;
-    border: none !important;
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
+ 

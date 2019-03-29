@@ -20,8 +20,10 @@
 //= require dropzone
 //= require turbolinks
 //= require bootstrap
+//= require form
+//= sifiles
 //= require material
+//=require bootstrapfile_input
 //= require jquery.easy-autocomplete
 //= require_tree .
-
 

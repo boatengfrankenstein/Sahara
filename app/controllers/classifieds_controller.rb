@@ -20,6 +20,10 @@ class ClassifiedsController < ApplicationController
   # GET /classifieds/new
   def new
     @classified = Classified.new
+    respond_to do |format|
+      format.html
+      format.js
+      end
   end
 
   # GET /classifieds/1/edit

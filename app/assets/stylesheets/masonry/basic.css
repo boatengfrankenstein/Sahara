@@ -250,21 +250,20 @@ ul {
 */
 
 .twitter {
-  border: 1px solid red;
-  height: 60px;
+  height: 50px;
   align-items: center;
   padding: 20px 80px 20px 20px;
   padding-right:50px;
 
   margin-right: auto;
-  border: 1px solid rgba(238,238,238 ,1);
-  border-radius: 5px;
+  border: 1px  1px 1px 1px solid rgb(235, 19, 19);
+  border-radius: 1px  1px 1px 5px;
   color: rgba(117,117,117 ,1);
   box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
 }
 .twitter li {
   cursor: pointer;
-  padding-left: 2%;
+  padding-left: 3%;
 }
 .twitter li:hover{
   color: rgba(85,172,238 ,1);
@@ -702,3 +701,5 @@ a.btn-social,
 {
 display: none;
 }
+
+

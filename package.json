@@ -2,6 +2,7 @@
   "name": "autocomplete",
   "private": true,
   "dependencies": {
-    "material-design-lite": "^1.3.0"
+    "material-design-lite": "^1.3.0",
+    "mdbootstrap": "^4.7.5"
   }
 }

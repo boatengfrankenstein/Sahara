@@ -15,120 +15,14 @@
       <% end %>
       </ul>
     </div>
+    <% end %>
+<label class="cabinet"> 
+       <%= f.file_field :images,  multiple: true, class:"file"  %>
+       </label>
+    <%= f.submit "Upload" %>
   <% end %>
-
-
-<div id="l" class="signin-card card">
-  <div class="card-body px-lg-5 pt-0">
-
-        <!-- Form -->
-        <form class="text-center" autocomplete="off" style="color: #757575;">
-<div class="md-form mt-5 form-lg">
- <select name="options" id="select" class="browser-default md-select form-control">
- <option value="1">Option 1</option>
- <option value="2">Option 2</option>
- <option value="3">Option 3</option>
- <option value="4">Option 4</option>
- <option value="5">Option 5</option>
- </select>
- <label class="active" for="form6">select a category</label>
- </div>
-
-  <!-- select category-->
-            <div class="md-form mt-5 form-lg" >
-            
-                <%= f.text_field :title ,class:"form-control md-textarea" %>
-             
-            
-                <label for="description">title</label>
-               
-            </div>
-
-
-            <!--INput-->
-            <div class="md-form mt-5 form-lg" >
-            <%= f.text_area :description , class:"form-control md-textarea" %>
-                
-                <label for="description">Description</label>
-                <small id="description" class="form-text  mb-4">
-                    At least 8 characters and 1 digit
-                </small>
-            </div>
-
-           <!-- Grid row -->
-  <div class="row">
-    <!-- Grid column -->
-    <div class="col">
-      <!-- Material input -->
-      <div class="md-form mt-3">
-        <%= f.text_field :price , class:"form-control", placeholder:"$0.00"  %>
-         <label for="description">Price</label>
-      </div>
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
-    <div class="col">
-
-   <%= f.check_box :is_free, class: 'switch-input', id:"id-name--1" %>
-	<label for="id-name--1" class="switch-label"><span class="toggle--on">free</span><span class="toggle--off">free</span></label>
-      </div>
-
-    <!-- Grid column -->
-  </div>
-
-
   
-<div class="row">
 
-   
-    <!--
-   <div class='file-input'>
-      <%= f.file_field :images, multiple: true %>
-     <%= f.hidden_field :images_cache %>
-     <div class="btn btn-primary btn-lg float-left"> choose file(s)</div>
-   </div>
-   -->
-
- <form class:"dropzone">
-    <div class="fallback">
-  <%= f.file_field :images, multiple: true %>
- <!-- <%= f.hidden_field :images_cache %>  -->
-  
-  </div>
-
-</form>
-
-
-  </div>
-<div class="row">
-
-    <div class="col">
-  
-    <small id="description" class="form-text  mt-3 mb-4 float-left">  <br>No files selected</small>
-   </div>
-
-      </div>
-</div>
-
-            <!-- Sign up button -->
-            <div class="md_button md-form content center-align">
-         <div class="md-form mt-5  form-lg" >
-           <button class="btn btn-info btn-lg btn-block my-5" type="submit">Post ad</button>
-
-         </div>
-         </div>
-
-
-            <!-- Terms of service -->
-        
-
-        </form>
-        <!-- Form -->
-
-    </div>
-</div>
-<% end %>
 </div>
 
 <!-- Material form contact -->

@@ -1,24 +1,22 @@
-
+<!--
 <nav>
-
-  <ul class="twitter " role="navigation">
-    <li><i class="fa fa-home"></i>Home</li>
-   <li><i class=" fa fa-envelope"></i><span>1 </span><span>Chats & Notifcations </span>
-
+  <ul class="twitter" role="navigation">
+    <li class=nav-item ><i class="fa fa-home"></i>Home</li>
+   <li class=nav-item><i class=" fa fa-envelope"></i><span>1 </span><span>Chats </span>
     </li>
+   <li class="nav-item"><span></span></li>
 
-   <li class="nav-item">
-     
-        </li>
-   
-      <li><i> <%= link_to image_tag('postadd_small'), new_classified_path %></i><span>Post Add</span>
+ 
+      <li class=nav-item> 
 
-    </li>
-  
+      <div class="text-center">
+      <%= link_to 'post ad',  new_classified_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window',class: 'btn btn-default btn-rounded my-4'} %>
+      </div>
+      </li>
 
      <ul class="navbar-nav ml-auto nav-flex-icons">
 
-
+         
 
   <% if user_signed_in? %>
       <li class="nav-item avatar">
@@ -27,21 +25,33 @@
               <i> <strong><%= current_user.username %></strong> </i>
         </a>
       </li>
-
-      
-    </ul>
       <% end %>
    
   </ul>
 
-  
-
          </ul>
 
 </nav>
+-->
 
 
+ <ul class="twitter" role="navigation">
+    <li><i class="fa fa-home"></i>Home</li>
+    <li><i class="fa fa-bell-o"></i>Notifications</li>
+    <li><i class="fa fa-envelope-o"></i>Messages</li>
+    <li class="twitter__bird"><i class="fa fa-twitter"></i></li>
+    <li><form><input placeholder="search twitter"/><i class="fa fa-search"></i></form></li>
+    <li><i class="fa fa-user-circle-o"></i></li>
+    <li><button>tweet</button></li>
+  </ul>
+  
 
+ <div class="container">
 
-
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
+ </div>
   
