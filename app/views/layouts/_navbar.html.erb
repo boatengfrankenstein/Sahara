@@ -38,11 +38,25 @@
  <ul class="twitter" role="navigation">
     <li><i class="fa fa-home"></i>Home</li>
     <li><i class="fa fa-bell-o"></i>Notifications</li>
-    <li><i class="fa fa-envelope-o"></i>Messages</li>
+    <li><i class="fa fa-envelope-o">1</i>Chats</li>
     <li class="twitter__bird"><i class="fa fa-twitter"></i></li>
-    <li><form><input placeholder="search twitter"/><i class="fa fa-search"></i></form></li>
+     <li> 
+
+      <div class="text-center">
+      <%= link_to 'post ad',  new_classified_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window',class: 'btn btn-default btn-rounded my-4'} %>
+      </div>
+      </li>
+   
+  <% if user_signed_in? %>
+      <li class="nav-item avatar">
+       
+          <%= photo_avatar(current_user, class: 'rounded-circle z-depth-0 ', style: 'width:30px;height:30px;') %>
+              <i> <%= current_user.username %></i>
+ 
+      </li>
+      <% end %>
     <li><i class="fa fa-user-circle-o"></i></li>
-    <li><button>tweet</button></li>
+
   </ul>
   
 
