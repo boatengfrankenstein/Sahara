@@ -1,9 +1,9 @@
 
 
- <div class="container">
+
 
 <%= render 'shared/errors', object: classified %>
-<%= form_with(model: classified, :html => {:class => 'dropzone',:id=>""}, local: true) do |f| %>
+<%= form_with(model: classified, :html => {:class => '',:id=>""}, local: true) do |f| %>
 
   <% if classified.errors.any? %>
     <div id="error_explanation">
@@ -18,11 +18,11 @@
   <% end %>
 
 
-<div id="l" class="signin-card card">
   <div class="card-body px-lg-5 pt-0">
 
-        <!-- Form -->
-        <form class="text-center" autocomplete="off" style="color: #757575;">
+
+     <!-- Form -->
+<form class="text-center" autocomplete="off" style="color: #757575;">
 <div class="md-form mt-5 form-lg">
  <select name="options" id="select" class="browser-default md-select form-control">
  <option value="1">Option 1</option>
@@ -35,24 +35,22 @@
  </div>
 
   <!-- select category-->
+
+        <label for="description">What are you selling?</label>
             <div class="md-form mt-5 form-lg" >
             
                 <%= f.text_field :title ,class:"form-control md-textarea" %>
-             
-            
-                <label for="description">title</label>
-               
+ 
             </div>
 
 
             <!--INput-->
+             <label for="description">Additional Information(Optional)</label>
             <div class="md-form mt-5 form-lg" >
-            <%= f.text_area :description , class:"form-control md-textarea" %>
+            <%= f.text_area :description , class:"form-control" %>
                 
-                <label for="description">Description</label>
-                <small id="description" class="form-text  mb-4">
-                    At least 8 characters and 1 digit
-                </small>
+               
+               
             </div>
 
            <!-- Grid row -->
@@ -60,9 +58,10 @@
     <!-- Grid column -->
     <div class="col">
       <!-- Material input -->
+      <label for="description">Price</label>
       <div class="md-form mt-3">
         <%= f.text_field :price , class:"form-control", placeholder:"$0.00"  %>
-         <label for="description">Price</label>
+       
       </div>
     </div>
     <!-- Grid column -->
@@ -94,13 +93,7 @@
  <div class:"dropzone" id="my-awesome-dropzone">
    <%= f.file_field :images, multiple: true %>
  -->
-  <div class="dropzone-previews"></div> 
 
- <!-- <%= f.hidden_field :images_cache %>  -->
-  
-
-
-</div>
 
 
   </div>
@@ -108,30 +101,28 @@
 
     <div class="col">
   
-    <small id="description" class="form-text  mt-3 mb-4 float-left">  <br>No files selected</small>
+   <label class="cabinet"> 
+   <div class="class="btn btn-primary btn-lg float-left">
+       <%= f.file_field :images,  multiple: true, class:"file"  %>
+       </label>
+ 
    </div>
 
       </div>
 </div>
 
-            <!-- Sign up button -->
-            <div class="md_button md-form content center-align">
-         <div class="md-form mt-5  form-lg" >
-           <button class="btn btn-info btn-lg btn-block my-5" type="submit">Post ad</button>
-
-         </div>
-         </div>
+          
 
 
             <!-- Terms of service -->
-        
+        <div class="modal-footer">
+  <button class="btn btn-primary">Post Ad</button>
+</div>
 
         </form>
         <!-- Form -->
+</div>
 
-    </div>
-</div>
 <% end %>
-</div>
 
 <!-- Material form contact -->
