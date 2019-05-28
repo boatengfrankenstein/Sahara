@@ -55,6 +55,7 @@ gem 'avatar_magick', '~> 1.0.1'
 gem 'avatars_for_rails', '~> 0.2.4'
 gem 'dropzonejs-rails'
 gem "jquery-fileupload-rails"
+gem 'ms-dropdown-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rack-cors'

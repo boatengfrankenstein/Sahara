@@ -19,6 +19,7 @@
 //= require rails-ujs
 //= require dropzone
 //= require turbolinks
+//= require jquery.dd.min
 //= require bootstrap
 //= require form
 //= sifiles

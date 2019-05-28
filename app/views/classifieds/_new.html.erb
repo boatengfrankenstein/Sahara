@@ -1,12 +1,13 @@
-<div class="modal-header">
-  <h4 class="modal-title" id="myModalLabel">Post Ad</h4>
-  <button type="button" class="close" data-dismiss="modal">x</button>
-
-</div>
+    <div class="modal-header text-center">
+        <h5 class="modal-title w-100 font-weight-bold">Post Ad</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 <div class="modal-body">
 
 
-<%= render 'tempform', classified: @classified %>
+<%= render 'tempform', classified: @classified , categories:@categories%>
 
 </div>
 <!-- Material form register -->

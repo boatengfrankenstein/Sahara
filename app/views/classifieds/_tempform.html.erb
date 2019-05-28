@@ -23,21 +23,23 @@
 
      <!-- Form -->
 <form class="text-center" autocomplete="off" style="color: #757575;">
-<div class="md-form mt-5 form-lg">
- <select name="options" id="select" class="browser-default md-select form-control">
- <option value="1">Option 1</option>
- <option value="2">Option 2</option>
- <option value="3">Option 3</option>
- <option value="4">Option 4</option>
- <option value="5">Option 5</option>
- </select>
- <label class="active" for="form6">select a category</label>
- </div>
+<div class="md-form mb-5">
+
+</div>
+ <label class="label_style">How would you classify your item?</label>
+  
+<div class="md-form mb-5">
+ 
+<%= f.select('id', @categories.collect {|r| [h(r.name), r.id] }, { :class => "form-control", :include_blank => false}) %>
+
+</div>
+
+
 
   <!-- select category-->
 
-        <label for="description">What are you selling?</label>
-            <div class="md-form mt-5 form-lg" >
+        <label class="label_style">What are you selling?</label>
+        <div class="md-form mb-5">
             
                 <%= f.text_field :title ,class:"form-control md-textarea" %>
  
@@ -45,8 +47,8 @@
 
 
             <!--INput-->
-             <label for="description">Additional Information(Optional)</label>
-            <div class="md-form mt-5 form-lg" >
+             <label class="label_style">Additional Information(Optional)</label>
+          <div class="md-form mb-5">
             <%= f.text_area :description , class:"form-control" %>
                 
                
@@ -58,7 +60,7 @@
     <!-- Grid column -->
     <div class="col">
       <!-- Material input -->
-      <label for="description">Price</label>
+      <label class="label_style">Price</label>
       <div class="md-form mt-3">
         <%= f.text_field :price , class:"form-control", placeholder:"$0.00"  %>
        
