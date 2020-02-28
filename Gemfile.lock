@@ -255,7 +255,7 @@ GEM
     private_pub (1.0.3)
       faye
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.3)
     rack (2.0.6)
     rack-cors (1.0.2)
     rack-test (1.1.0)
@@ -401,7 +401,7 @@ DEPENDENCIES
   omniauth-twitter (~> 1.2, >= 1.2.1)
   pg (~> 0.21)
   private_pub
-  puma (~> 3.7)
+  puma (~> 3.12)
   rack-cors
   rails (~> 5.1.1)
   ransack (~> 1.8, >= 1.8.2)
